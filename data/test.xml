@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <signature n="ubb-a-sign-0002">
+    <file xmlns:file="http://expath.org/ns/file"
+          xmlns:ubbont="http://data.ub.uib.no/ontology/"
+          xmlns:flub="http://data.ub.uib.no/flub"
+          xmlns:dct="http://purl.org/dc/terms/"
+          path="C:\Users\Eddy\Documents\NetBeansProjects\Imaging\data\ubb.jpg"
+          n="ubb-a-sign-0002"
+          filetype="jpg"/>
+    <file xmlns:file="http://expath.org/ns/file"
+          xmlns:ubbont="http://data.ub.uib.no/ontology/"
+          xmlns:flub="http://data.ub.uib.no/flub"
+          xmlns:dct="http://purl.org/dc/terms/"
+          path="\Users\Eddy\Desktop\ubb2.jpg"
+          n="ubb-a-sign-sm2"
+          filetype="jpg"/>
+  </signature>
+</root>
