@@ -35,17 +35,16 @@ import org.xml.sax.SAXException;
         public static final String TEMP_FILE_NAME = "temp.jpg";
         public static final String TEMP_FOLDER_NAME = "exifMetadataTemp";
     
-        public static void main(String[] args) throws SAXException, IOException, ParserConfigurationException, 
-               TransformerException, ImageReadException, ImageWriteException
+        public static void main(String[] args) throws SAXException, IOException, SecurityException, ParserConfigurationException, 
+               TransformerException, ImageReadException, ImageWriteException 
           {          
                   
                   String systemTempDirectoryPath =  FilenameUtils.concat(FileUtils.getTempDirectoryPath(), TEMP_FOLDER_NAME);
                   long startTime = System.currentTimeMillis();
                   
-                  //get the system argument "filePath" from the command line
-                  String pathToXml =  System.getProperty("filePath"); /**args[0];**/   
-                  
-                  
+                  //Get the system variable "filePath" from the command line.
+                  String pathToXml =  System.getProperty("filePath");  
+                                   
                   //If no argument passed, notify a user.
                   if(pathToXml == null || pathToXml.trim().isEmpty())
                    {
@@ -55,11 +54,14 @@ import org.xml.sax.SAXException;
                   {
                       ExifMetadataWriter exif = new ExifMetadataWriter();
 
-                      //create new temp folder
+                      //Create new temp folder if it does not exist
                       File tempFolderPath = new File(systemTempDirectoryPath);
-                      tempFolderPath.mkdir();
-
-                      //create a temporary file within the temp folder
+                      if(!tempFolderPath.exists())
+                      {
+                         tempFolderPath.mkdir();
+                      }
+                      
+                      //Create a temporary file within the temp folder
                       String tempFilePath = FilenameUtils.concat(systemTempDirectoryPath , TEMP_FILE_NAME);
                       File  tempFile = new File(tempFilePath);
 
