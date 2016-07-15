@@ -1,5 +1,7 @@
 # ubb-imaging
 
+[![Join the chat at https://gitter.im/ubbdst/ubb-imaging](https://badges.gitter.im/ubbdst/ubb-imaging.svg)](https://gitter.im/ubbdst/ubb-imaging?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
  This application writes exif metadata to the JPEG images (currently only <code> Image ID, Document Name, Image Description and User Comments</code>). 
  The system reads the XML file as the first argument from the command line so as to know which metadata to write and where are the location of the files.
  The XML file must adhere to our structure. Please see the example of the XML structure in <code>data/test.xml</code>
